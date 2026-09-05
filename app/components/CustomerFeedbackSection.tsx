@@ -206,7 +206,9 @@ export const CustomerFeedbackSection: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium text-white/90">{t.author}</span>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#c9a86a]" title="Verified Allocation Patron" />
+                    <span title="Verified Allocation Patron">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#c9a86a]" />
+                    </span>
                   </div>
                   <span className="text-[11px] text-white/40 block mt-0.5">{t.location}</span>
                   <span className="text-[10px] text-white/30 font-mono block mt-1">
