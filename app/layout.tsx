@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AmbientAura } from "./components/AmbientAura";
 
 export const metadata: Metadata = {
   title: "Suwani | Haute Cellular Restorative",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-black">
       <body className="antialiased bg-[#000000] text-white selection:bg-white/20">
+        <AmbientAura />
         {children}
       </body>
     </html>

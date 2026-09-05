@@ -20,9 +20,9 @@ export const Header: React.FC = () => {
 
   const navLinks = [
     { label: "Collection", href: "/#collection" },
-    { label: "Anatomy", href: "/#story" },
-    { label: "Engineering", href: "/#specifications" },
-    { label: "Ritual", href: "/#ritual" },
+    { label: "Rituals", href: "/rituals" },
+    { label: "Diagnostic", href: "/diagnostic" },
+    { label: "Reviews", href: "/#feedback" },
     { label: "Atelier", href: "/about" },
   ];
 
@@ -53,13 +53,16 @@ export const Header: React.FC = () => {
         {/* Desktop Minimal Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.25em] text-white/60 font-light">
           {navLinks.map((link) => {
-            const isAboutActive = link.href === "/about" && pathname === "/about";
+            const isActive =
+              (link.href === "/about" && pathname === "/about") ||
+              (link.href === "/rituals" && pathname === "/rituals") ||
+              (link.href === "/diagnostic" && pathname === "/diagnostic");
             return (
               <Link
                 key={link.label}
                 href={link.href}
                 className={`transition-colors duration-200 ${
-                  isAboutActive ? "text-[#c9a86a] font-medium" : "hover:text-white"
+                  isActive ? "text-[#c9a86a] font-medium" : "hover:text-white"
                 }`}
               >
                 {link.label}

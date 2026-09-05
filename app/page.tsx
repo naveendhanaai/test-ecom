@@ -5,8 +5,11 @@ import Link from "next/link";
 import { Header } from "./components/Header";
 import { ProductScrollCanvas } from "./components/ProductScrollCanvas";
 import { ProductGridSection } from "./components/ProductGridSection";
+import { MarqueeTicker } from "./components/MarqueeTicker";
+import { LuxuryBannerSection } from "./components/LuxuryBannerSection";
+import { CustomerFeedbackSection } from "./components/CustomerFeedbackSection";
 import { Footer } from "./components/Footer";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -19,8 +22,14 @@ export default function Home() {
         <ProductScrollCanvas />
       </section>
 
+      {/* Editorial Running Press & Accolades Marquee */}
+      <MarqueeTicker />
+
       {/* Product Collection Showcase Grid */}
       <ProductGridSection />
+
+      {/* Luxury Brand & Harvest Allocation Banner */}
+      <LuxuryBannerSection />
 
       {/* Architectural Specifications Section */}
       <section id="specifications" className="py-32 px-6 md:px-12 bg-[#000000] border-t border-white/[0.06]">
@@ -92,6 +101,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Customer Feedback & Patron Testimonials Section */}
+      <CustomerFeedbackSection />
+
       {/* Daily Ritual Section */}
       <section id="ritual" className="py-32 px-6 md:px-12 bg-[#000000] border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto text-center">
@@ -115,10 +127,10 @@ export default function Home() {
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/about"
+              href="/rituals"
               className="px-8 py-4 rounded-full bg-white/[0.03] border border-white/20 hover:border-white text-white text-xs uppercase tracking-[0.25em] font-light transition-all"
             >
-              Discover Atelier Philosophy
+              Explore Circadian Rituals
             </Link>
           </div>
         </div>

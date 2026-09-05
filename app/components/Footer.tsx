@@ -69,8 +69,8 @@ export const Footer: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/about#pillars" className="hover:text-white transition-colors">
-                The 4 Sacred Pillars
+              <Link href="/rituals" className="hover:text-white transition-colors">
+                Circadian Rituals
               </Link>
             </li>
             <li>
@@ -79,8 +79,8 @@ export const Footer: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/#ritual" className="hover:text-white transition-colors">
-                Application Protocol
+              <Link href="/#feedback" className="hover:text-white transition-colors">
+                Patron Dispatches
               </Link>
             </li>
           </ul>
@@ -93,14 +93,14 @@ export const Footer: React.FC = () => {
           </span>
           <ul className="space-y-2.5 text-xs text-white/60 font-light">
             <li>
-              <span className="hover:text-white cursor-pointer transition-colors">
-                Bespoke Diagnostic
-              </span>
+              <Link href="/diagnostic" className="hover:text-[#c9a86a] text-white/80 transition-colors">
+                Bespoke Diagnostic →
+              </Link>
             </li>
             <li>
-              <span className="hover:text-white cursor-pointer transition-colors">
-                Allocation Concierge
-              </span>
+              <Link href="/products/suwani-creme-dor" className="hover:text-white transition-colors">
+                Crème d'Or Allocation
+              </Link>
             </li>
             <li>
               <span className="hover:text-white cursor-pointer transition-colors">
@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
             </li>
             <li>
               <span className="hover:text-white cursor-pointer transition-colors">
-                Client Relations
+                Client Concierge
               </span>
             </li>
           </ul>
