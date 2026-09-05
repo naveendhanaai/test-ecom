@@ -79,7 +79,7 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const dpr = window.devicePixelRatio || 1;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const rect = canvas.getBoundingClientRect();
 
     // Scale canvas buffer to physical pixels for crystal retina clarity
@@ -100,19 +100,19 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Calculate strict "contain" aspect-ratio dimensions
-    const sourceW = img.naturalWidth;
-    const sourceH = img.naturalHeight;
+    const sourceW = img.naturalWidth || 1920;
+    const sourceH = img.naturalHeight || 1080;
 
     const hRatio = canvas.width / sourceW;
     const vRatio = canvas.height / sourceH;
     const ratio = Math.min(hRatio, vRatio);
 
-    const drawW = sourceW * ratio;
-    const drawH = sourceH * ratio;
-    const drawX = (canvas.width - drawW) / 2;
-    const drawY = (canvas.height - drawH) / 2;
+    const drawW = Math.round(sourceW * ratio);
+    const drawH = Math.round(sourceH * ratio);
+    const drawX = Math.round((canvas.width - drawW) / 2);
+    const drawY = Math.round((canvas.height - drawH) / 2);
 
-    // Direct draw of source photographic frame (zero distortion, zero filter)
+    // Direct draw of source photographic frame (zero distortion, crisp integer bounds)
     ctx.drawImage(img, 0, 0, sourceW, sourceH, drawX, drawY, drawW, drawH);
 
     lastRenderedFrameRef.current = frameIdx;
@@ -263,7 +263,7 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
         {/* The single HTML5 Canvas rendering the uploaded cream-tub sequence */}
         <canvas
           ref={canvasRef}
-          className="w-full h-full object-contain pointer-events-none"
+          className="w-full h-full block pointer-events-none"
           style={{ backgroundColor: BG_COLOR }}
         />
 

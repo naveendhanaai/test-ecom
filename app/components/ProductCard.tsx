@@ -27,13 +27,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
 
         {/* Product Visual Frame */}
-        <Link href={`/products/${product.slug}`} className="block relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black/60 my-4 border border-white/[0.04]">
+        <Link href={`/products/${product.slug}`} className="block relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-black my-4 border border-white/[0.06]">
           <Image
             src={product.heroImage}
             alt={product.name}
             fill
+            unoptimized
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+            className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-95 group-hover:opacity-100"
           />
           {/* Subtle vignette gloss */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />

@@ -81,7 +81,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         {/* Left Column: Visual Gallery / 3D Scrubber (7 cols) */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden bg-white/[0.015] border border-white/[0.08] shadow-2xl flex items-center justify-center">
+          <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden bg-black border border-white/[0.08] shadow-2xl flex items-center justify-center">
             {isFlagship ? (
               <div className="relative w-full h-full">
                 <Image
@@ -89,7 +89,9 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
                   alt={`${product.name} Frame ${scrubFrame}`}
                   fill
                   priority
-                  className="object-cover"
+                  unoptimized
+                  sizes="(max-width: 1200px) 100vw, 60vw"
+                  className="object-contain"
                 />
                 <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] uppercase tracking-widest font-mono text-[#c9a86a]">
                   Vessel Phase: {scrubFrame <= 25 ? "Hermetic Closed" : scrubFrame <= 50 ? "Lid Elevation" : "Whipped Core Unsealed"} ({scrubFrame}/80)
@@ -102,7 +104,9 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
                   alt={product.name}
                   fill
                   priority
-                  className="object-cover"
+                  unoptimized
+                  sizes="(max-width: 1200px) 100vw, 60vw"
+                  className="object-contain"
                 />
               </div>
             )}
