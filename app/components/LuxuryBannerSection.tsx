@@ -81,9 +81,9 @@ export const LuxuryBannerSection: React.FC = () => {
 
           <div className="relative z-10 max-w-3xl">
             {/* Live Allocation Notice Pill */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#c9a86a]/15 border border-[#c9a86a]/30 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a] animate-pulse" />
-              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#e5c17d] font-semibold">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#c9a86a]/15 border border-[#c9a86a]/30 mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#c9a86a] animate-pulse" />
+              <span className="text-xs sm:text-xs md:text-sm font-mono uppercase tracking-[0.25em] text-[#e5c17d] font-semibold">
                 PHILOSOPHY &amp; HARVEST • RASAYANA ALLOCATION
               </span>
             </div>

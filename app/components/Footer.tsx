@@ -12,20 +12,20 @@ export const Footer: React.FC = () => {
         {/* Brand & Manifesto Column (5 cols) */}
         <div className="md:col-span-5">
           <div className="flex items-center gap-4 mb-6">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#c9a86a]/50 bg-black flex items-center justify-center shadow-xl shadow-[#c9a86a]/20 shrink-0">
+            <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl overflow-hidden border-2 border-[#c9a86a] bg-black flex items-center justify-center shadow-xl shadow-[#c9a86a]/30 shrink-0 p-1">
               <Image
                 src="/logo.jpg"
-                alt="Asaliya Production"
+                alt="Asaliya Production Logo"
                 fill
-                className="object-cover"
-                sizes="56px"
+                className="object-contain p-0.5"
+                sizes="72px"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-normal tracking-[0.22em] uppercase text-white/95">
+              <span className="text-xl sm:text-2xl font-semibold tracking-[0.22em] uppercase text-white/95">
                 ASALIYA
               </span>
-              <span className="text-[10px] tracking-[0.38em] uppercase text-[#c9a86a] font-semibold mt-0.5">
+              <span className="text-xs sm:text-xs tracking-[0.45em] uppercase text-[#e5c17d] font-bold mt-1">
                 PRODUCTION
               </span>
             </div>

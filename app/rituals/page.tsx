@@ -43,9 +43,9 @@ export default function RitualsPage() {
       {/* Hero Intro */}
       <section className="pt-40 pb-20 px-6 md:px-12 border-b border-white/[0.06] relative">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+          <div className="flex items-center gap-2.5 mb-6">
+            <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
               The Art of Ceremony • Circadian Skincare
             </span>
           </div>
@@ -222,7 +222,7 @@ export default function RitualsPage() {
       {/* Interactive Thermal Activation Meditation */}
       <section className="py-28 px-6 md:px-12 bg-white/[0.015] border-b border-white/[0.06]">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-3">
+          <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium block mb-3">
             Interactive Protocol
           </span>
           <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white/95">

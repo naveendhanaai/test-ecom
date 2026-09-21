@@ -158,9 +158,9 @@ export default function DiagnosticPage() {
           <div>
             {/* Header */}
             <div className="mb-12">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-                <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-2">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+                <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium block mb-2">
                   Studio Consultation • Step {currentStep + 1} of {QUESTIONS.length}
                 </span>
               </div>
@@ -234,9 +234,9 @@ export default function DiagnosticPage() {
         {recommendedProduct && (
           <div className="animate-fadeIn space-y-10">
             <div>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-                <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+                <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
                   Prescription Protocol • Serial #SW-{Math.floor(1000 + Math.random() * 9000)}
                 </span>
               </div>

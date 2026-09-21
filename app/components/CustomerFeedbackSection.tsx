@@ -121,9 +121,9 @@ export const CustomerFeedbackSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-              <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+              <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
                 PATRON DISPATCHES • VERIFIED ALLOCATIONS
               </span>
             </div>

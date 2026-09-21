@@ -10,6 +10,7 @@ import { MarqueeTicker } from "./components/MarqueeTicker";
 import { LuxuryBannerSection } from "./components/LuxuryBannerSection";
 import { CustomerFeedbackSection } from "./components/CustomerFeedbackSection";
 import { PartnersSection } from "./components/PartnersSection";
+import { CertificationsSection } from "./components/CertificationsSection";
 import { Footer } from "./components/Footer";
 import { ArrowUpRight } from "lucide-react";
 
@@ -48,9 +49,9 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
             <div>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-                <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+                <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
                   ARCHITECTURAL ANATOMY • VESSEL ENGINEERING
                 </span>
               </div>
@@ -121,11 +122,23 @@ export default function Home() {
         {/* Kinetic Vessel Exploration Header */}
         <div className="w-full py-4 border-b border-white/[0.06] bg-[#030303] flex items-center justify-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-          <span className="text-[10px] uppercase tracking-[0.35em] text-white/80 font-mono">
+          <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-white/85 font-mono font-medium">
             KINETIC JOURNEY • VESSEL IN MOTION
           </span>
         </div>
         <ProductScrollCanvas />
+      </section>
+
+      {/* Spatial Scrubbing Section */}
+      <section className="py-20 px-6 md:px-12 bg-[#020202] border-t border-white/[0.08] text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2.5 mb-3">
+            <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-white/85 font-mono font-medium">
+              CONTINUOUS DISPERSION • SPATIAL SCRUBBING
+            </span>
+          </div>
+        </div>
       </section>
 
       {/* Customer Feedback & Patron Testimonials Section */}
@@ -134,19 +147,16 @@ export default function Home() {
       {/* Global Accredited Partners Section */}
       <PartnersSection sectionIndex="" />
 
-      {/* Daily Ritual Section (Application Protocol) */}
-      <section id="ritual" className="py-32 px-6 md:px-12 bg-gradient-to-b from-[#080705] via-[#0d0b07] to-[#020202] relative overflow-hidden">
-        {/* Golden Section Transition Divider */}
-        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#c9a86a]/40 to-transparent" />
+      {/* Ritual Protocol Section (Section 05: Chrono-Biology) */}
+      <section id="ritual" className="py-32 px-6 md:px-12 bg-gradient-to-b from-[#020304] via-[#050608] to-[#010102] relative text-center">
+        {/* Technical Section Transition Divider */}
+        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
         
-        {/* Sacred Temple Radial Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full bg-[#c9a86a]/[0.08] blur-[150px] pointer-events-none" />
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
-              APPLICATION PROTOCOL • THE SACRED RITUAL
+        <div className="max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2.5 mb-3">
+            <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
+              CHRONO-BIOLOGY • RITUAL INSTRUCTION
             </span>
           </div>
 
@@ -202,6 +212,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Official Clinical & Ayurvedic Certifications Section (Near Footer) */}
+      <CertificationsSection />
 
       {/* Footer */}
       <Footer />

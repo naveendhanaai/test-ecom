@@ -37,23 +37,27 @@ export const Header: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Brand Logo & Wordmark */}
-        <Link href="/" className="flex items-center gap-4 group">
-          <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-[#c9a86a]/60 group-hover:border-[#c9a86a] transition-all duration-300 bg-black flex items-center justify-center shadow-xl shadow-[#c9a86a]/25 shrink-0">
+        {/* Brand Logo & Wordmark - High Visibility & Luminous Gold Framing */}
+        <Link href="/" className="flex items-center gap-3.5 sm:gap-4 group">
+          {/* Logo Emblem Container - Clean, Non-Clipped Square with Golden Aura */}
+          <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 rounded-2xl overflow-hidden border-2 border-[#c9a86a] group-hover:border-[#f0dfba] transition-all duration-300 bg-black flex items-center justify-center shadow-xl shadow-[#c9a86a]/35 group-hover:shadow-[#c9a86a]/60 shrink-0 p-1">
+            <span className="absolute -inset-1 rounded-2xl bg-[#c9a86a]/20 blur-sm group-hover:bg-[#c9a86a]/40 transition-all pointer-events-none" />
             <Image
               src="/logo.jpg"
-              alt="Asaliya Production"
+              alt="Asaliya Production Logo"
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
-              sizes="(max-width: 768px) 48px, 56px"
+              className="object-contain p-0.5 group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 56px, 72px"
               priority
             />
           </div>
+
+          {/* Brand Name Typography - Scaled Up and Prominent */}
           <div className="flex flex-col">
-            <span className="text-base sm:text-lg md:text-xl font-medium tracking-[0.22em] uppercase text-white group-hover:text-[#c9a86a] transition-colors leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            <span className="text-lg sm:text-xl md:text-2xl font-semibold tracking-[0.22em] uppercase text-white group-hover:text-[#c9a86a] transition-colors leading-none drop-shadow-[0_2px_12px_rgba(201,168,106,0.35)]">
               ASALIYA
             </span>
-            <span className="text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.38em] uppercase text-[#e5c17d] font-bold mt-0.5 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+            <span className="text-[10px] sm:text-xs md:text-xs tracking-[0.45em] uppercase text-[#e5c17d] font-bold mt-1 drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
               PRODUCTION
             </span>
           </div>

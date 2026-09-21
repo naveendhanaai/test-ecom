@@ -40,9 +40,9 @@ export default function CartPage() {
           {/* Page Heading */}
           <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-8 border-b border-white/[0.06] gap-4">
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-                <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+                <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
                   Private Client Checkout
                 </span>
               </div>

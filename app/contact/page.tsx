@@ -36,10 +36,10 @@ export default function ContactPage() {
       {/* Hero Header Section */}
       <section className="pt-36 pb-16 px-6 md:px-12 border-b border-white/[0.06] bg-gradient-to-b from-[#0a0a0a] via-black to-black">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
-              Client Concierge • London &amp; Tokyo
+          <div className="flex items-center gap-2.5 mb-6">
+            <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
+              Concierge &amp; Private Advisory
             </span>
           </div>
 
