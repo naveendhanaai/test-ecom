@@ -232,8 +232,8 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
             className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#000000] text-white"
           >
             <div className="flex flex-col items-center max-w-xs w-full px-6 text-center">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-light mb-3">
-                SUWANI HAUTE BEAUTÉ
+              <span className="text-[10px] uppercase tracking-[0.4em] text-[#c9a86a] font-medium mb-3">
+                ASALIYA PRODUCTION
               </span>
               <h2 className="text-xl font-light tracking-tight text-white/90 mb-8">
                 Preparing Presentation
@@ -277,13 +277,13 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
           className="absolute inset-x-6 top-20 md:top-24 flex flex-col items-center text-center max-w-3xl mx-auto pointer-events-none z-20"
         >
           <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-medium mb-2">
-            Haute Cellular Restorative
+            Vedic Rasayana Restorative
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-light text-white/95 tracking-tight leading-[1.08]">
-            Suwani Crème d&apos;Or
+            Golden Restorative Cream
           </h1>
           <p className="mt-2 text-xs sm:text-sm text-white/60 font-light max-w-md leading-relaxed">
-            Housed in a 24K gilded architectural vessel.
+            Wild turmeric, sacred sandalwood &amp; Kashmiri saffron in a biophotonic violet vessel.
           </p>
         </motion.div>
 
@@ -303,17 +303,17 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
           className="absolute left-6 sm:left-12 md:left-16 bottom-12 md:bottom-20 max-w-xs sm:max-w-sm pointer-events-none z-20"
         >
           <span className="font-mono text-[10px] tracking-widest text-[#c9a86a] block mb-1.5">
-            01 / GILDED ELEVATION
+            01 / HERMETIC ELEVATION
           </span>
           <h2 className="text-xl sm:text-2xl font-light text-white/90 tracking-tight leading-snug">
             Precision Axial Decoupling
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-white/60 font-light leading-relaxed">
-            The weighted brushed gold cap lifts smoothly along the vertical axis,
+            The weighted obsidian cap lifts smoothly along the vertical axis,
             releasing atmospheric seal pressure without disturbing the cream surface.
           </p>
           <div className="mt-3 pt-2 border-t border-white/10 text-[10px] text-white/40 tracking-wider font-mono">
-            • Calibrated micro-pitch gold thread
+            • Calibrated micro-pitch airtight thread
           </div>
         </motion.div>
 
@@ -326,14 +326,14 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
             02 / CORE EXPOSURE
           </span>
           <h2 className="text-xl sm:text-2xl font-light text-white/90 tracking-tight leading-snug">
-            Whipped Peak &amp; Gilded Disc
+            Whipped Peak &amp; Freshness Disc
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-white/60 font-light leading-relaxed">
-            The internal hermetic gold disc levitates above the fresh whipped cream peak,
-            protecting cellular botanicals until the moment of application.
+            The internal hermetic freshness disc levitates above the fresh whipped cream peak,
+            protecting wild turmeric and sandalwood botanicals until the moment of application.
           </p>
           <div className="mt-3 pt-2 border-t border-white/10 text-[10px] text-white/40 tracking-wider font-mono">
-            • Cold-extracted cellular phyto-lipids
+            • Wild turmeric, sandalwood &amp; saffron bio-lipids
           </div>
         </motion.div>
 
@@ -353,13 +353,13 @@ export const ProductScrollCanvas: React.FC<ProductScrollCanvasProps> = ({ onLoad
           className="absolute inset-x-6 top-20 md:top-24 flex flex-col items-center text-center max-w-2xl mx-auto pointer-events-none z-20"
         >
           <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-medium mb-1.5">
-            The Climax of Form &amp; Formulation
+            The Pinnacle of Vedic Longevity
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-light text-white/95 tracking-tight leading-tight">
-            Suwani Crème d&apos;Or
+            Golden Restorative Cream
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-white/60 font-light max-w-sm leading-relaxed">
-            Housed in 24K gilded architectural porcelain.
+            Enriched with wild turmeric, sacred sandalwood &amp; Kashmiri saffron.
           </p>
         </motion.div>
 

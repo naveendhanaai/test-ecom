@@ -15,8 +15,10 @@ import {
   Layers,
   Heart,
   Share2,
+  ShoppingBag,
 } from "lucide-react";
 import { ProductCard } from "@/app/components/ProductCard";
+import { useCart } from "@/app/context/CartContext";
 
 interface ProductDetailClientProps {
   product: Product;
@@ -25,8 +27,10 @@ interface ProductDetailClientProps {
 export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ product }) => {
   const [activeTab, setActiveTab] = useState<"actives" | "ritual" | "clinical" | "ingredients">("actives");
   const [quantity, setQuantity] = useState<number>(1);
-  const [reserved, setReserved] = useState<boolean>(false);
-  const [scrubFrame, setScrubFrame] = useState<number>(1); // For creme d'or 80-frame inspector
+  const [added, setAdded] = useState<boolean>(false);
+  const [scrubFrame, setScrubFrame] = useState<number>(1); // For 80-frame inspector
+
+  const { addToCart } = useCart();
 
   const isFlagship = product.slug === "suwani-creme-dor";
 
@@ -36,11 +40,12 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
   // Format frame number
   const currentFrameUrl = `/cream-tub/ezgif-frame-${String(scrubFrame).padStart(3, "0")}.jpg`;
 
-  const handleReserve = () => {
-    setReserved(true);
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
+    setAdded(true);
     setTimeout(() => {
-      // Keep state or auto dismiss after 6s
-    }, 6000);
+      setAdded(false);
+    }, 2500);
   };
 
   return (
@@ -49,11 +54,11 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between border-b border-white/[0.06]">
         <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/50">
           <Link
-            href="/#collection"
+            href="/shop"
             className="inline-flex items-center gap-2 hover:text-[#c9a86a] transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Repertoire</span>
+            <span>Shop</span>
           </Link>
           <span>/</span>
           <span className="text-[#c9a86a] capitalize">{product.category}</span>
@@ -134,7 +139,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
                 className="w-full accent-[#c9a86a] bg-white/10 h-1.5 rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[9px] font-mono text-white/40 mt-2 uppercase">
-                <span>01. Sealed 24K Cap</span>
+                <span>01. Sealed Hermetic Cap</span>
                 <span>40. Hermetic Lift</span>
                 <span>80. Active Matrix</span>
               </div>
@@ -163,11 +168,17 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
         {/* Right Column: Narrative, Actives, Reservation (5 cols) */}
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
-            {/* Category & Badge */}
-            <div className="flex items-center gap-3 mb-4">
+            {/* Category, Dosha & Badge */}
+            <div className="flex flex-wrap items-center gap-2.5 mb-4">
               <span className="px-3 py-1 rounded-full bg-[#c9a86a]/10 border border-[#c9a86a]/30 text-[10px] font-mono uppercase tracking-widest text-[#c9a86a]">
                 {product.category}
               </span>
+              {product.dosha && (
+                <span className="px-3 py-1 rounded-full bg-[#c9a86a]/15 border border-[#c9a86a]/40 text-[10px] font-mono uppercase tracking-widest text-[#c9a86a] flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
+                  {product.dosha}
+                </span>
+              )}
               {product.badge && (
                 <span className="px-3 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[10px] uppercase tracking-widest text-white/70">
                   {product.badge}
@@ -199,7 +210,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
               {product.description}
             </p>
 
-            {/* Quantity Selector & Reservation CTA */}
+            {/* Quantity Selector & Add to Cart CTA */}
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-4">
                 <div className="flex items-center border border-white/20 rounded-full px-3 py-1.5 bg-white/[0.02]">
@@ -220,31 +231,42 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
                 <span className="text-[11px] text-white/40 font-mono">Max 5 units per client</span>
               </div>
 
-              <button
-                onClick={handleReserve}
-                disabled={reserved}
-                className={`w-full py-4 rounded-full text-xs uppercase tracking-[0.25em] font-medium transition-all duration-300 shadow-2xl flex items-center justify-center gap-2 ${
-                  reserved
-                    ? "bg-[#c9a86a] text-black cursor-default"
-                    : "bg-white text-black hover:bg-[#c9a86a] hover:text-black"
-                }`}
-              >
-                {reserved ? (
-                  <>
-                    <Check className="w-4 h-4" />
-                    <span>Allocation Reserved #{Math.floor(1000 + Math.random() * 9000)}</span>
-                  </>
-                ) : (
-                  <>
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Reserve Allocation • {product.price}</span>
-                  </>
-                )}
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={handleAddToCart}
+                  className={`flex-1 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-medium transition-all duration-300 shadow-2xl flex items-center justify-center gap-2 ${
+                    added
+                      ? "bg-[#c9a86a] text-black cursor-default"
+                      : "bg-white text-black hover:bg-[#c9a86a] hover:text-black"
+                  }`}
+                >
+                  {added ? (
+                    <>
+                      <Check className="w-4 h-4 text-black" />
+                      <span>Added to Cart ({quantity})</span>
+                    </>
+                  ) : (
+                    <>
+                      <ShoppingBag className="w-3.5 h-3.5" />
+                      <span>Add to Cart • £{(product.priceNumeric * quantity).toLocaleString()}</span>
+                    </>
+                  )}
+                </button>
 
-              {reserved && (
-                <div className="p-4 rounded-xl bg-[#c9a86a]/10 border border-[#c9a86a]/30 text-xs text-[#c9a86a] leading-relaxed animate-fadeIn">
-                  ✓ Your micro-batch allocation has been logged. Our private client concierge will dispatch your climate-controlled dispatch notice shortly.
+                <Link
+                  href="/cart"
+                  className="px-6 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-medium transition-all duration-300 border border-white/20 hover:border-white text-white hover:text-white flex items-center justify-center gap-2"
+                >
+                  View Cart
+                </Link>
+              </div>
+
+              {added && (
+                <div className="p-4 rounded-xl bg-[#c9a86a]/10 border border-[#c9a86a]/30 text-xs text-[#c9a86a] leading-relaxed animate-fadeIn flex items-center justify-between">
+                  <span>✓ Added to your cart. Ready for private checkout.</span>
+                  <Link href="/cart" className="underline font-mono uppercase tracking-wider text-[10px]">
+                    Go to Cart →
+                  </Link>
                 </div>
               )}
             </div>
@@ -253,15 +275,19 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
             <div className="mt-8 pt-6 border-t border-white/[0.06] space-y-2.5 text-xs text-white/50 font-light">
               <div className="flex items-center gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-[#c9a86a]" />
-                <span>Individually serialized & sealed in Kyoto atelier</span>
+                <span>Individually serialised &amp; sealed in London studio</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Droplets className="w-4 h-4 text-[#c9a86a]" />
                 <span>100% Anhydrous. Zero filler water, silicones, or microplastics</span>
               </div>
               <div className="flex items-center gap-2.5">
+                <Sparkles className="w-4 h-4 text-[#c9a86a]" />
+                <span>Authentic Ayurvedic Rasayana botanicals with certified cold-extractions</span>
+              </div>
+              <div className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 text-[#c9a86a]" />
-                <span>Complimentary climate-controlled worldwide express courier</span>
+                <span>Complimentary climate-controlled UK express courier</span>
               </div>
             </div>
           </div>
@@ -273,8 +299,8 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
         {/* Navigation Tabs */}
         <div className="flex items-center gap-3 sm:gap-6 border-b border-white/[0.06] pb-4 overflow-x-auto scrollbar-none mb-12">
           {[
-            { id: "actives", label: "01 / Bio-Actives & Terroirs" },
-            { id: "ritual", label: "02 / Application Ritual" },
+            { id: "actives", label: "01 / Rasayana Actives & Terroirs" },
+            { id: "ritual", label: "02 / Vedic Ritual & Marma Points" },
             { id: "clinical", label: "03 / Clinical Assays" },
             { id: "ingredients", label: "04 / Full INCI Ledger" },
           ].map((tab) => (
@@ -407,10 +433,10 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
             </h2>
           </div>
           <Link
-            href="/#collection"
+            href="/shop"
             className="text-xs uppercase tracking-widest text-white/60 hover:text-white flex items-center gap-1.5 transition-colors"
           >
-            <span>Explore Entire Repertoire</span>
+            <span>Explore All Formulations</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </Link>
         </div>

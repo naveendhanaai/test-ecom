@@ -160,8 +160,8 @@ export default function DiagnosticPage() {
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-                <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
-                  Atelier Consultation • Step {currentStep + 1} of {QUESTIONS.length}
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-2">
+                  Studio Consultation • Step {currentStep + 1} of {QUESTIONS.length}
                 </span>
               </div>
               <h1 className="text-3xl sm:text-5xl font-light tracking-tight text-white/95">

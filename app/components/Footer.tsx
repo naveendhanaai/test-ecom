@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 
@@ -10,27 +11,38 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-white/[0.06]">
         {/* Brand & Manifesto Column (5 cols) */}
         <div className="md:col-span-5">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center">
-              <span className="font-serif italic text-xs text-[#c9a86a]">S</span>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#c9a86a]/50 bg-black flex items-center justify-center shadow-xl shadow-[#c9a86a]/20 shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt="Asaliya Production"
+                fill
+                className="object-cover"
+                sizes="56px"
+              />
             </div>
-            <span className="text-sm tracking-[0.3em] uppercase text-white/90 font-light">
-              SUWANI BEAUTÉ
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg font-normal tracking-[0.22em] uppercase text-white/95">
+                ASALIYA
+              </span>
+              <span className="text-[10px] tracking-[0.38em] uppercase text-[#c9a86a] font-semibold mt-0.5">
+                PRODUCTION
+              </span>
+            </div>
           </div>
           <p className="text-xs text-white/50 font-light leading-relaxed max-w-sm">
-            Haute cellular formulation atelier based between Paris and Kyoto.
-            Synthesized through cryogenic botanical extractions, zero water dilution,
-            and housed in light-blocking architectural brass and crystal vessels.
+            Fine cellular formulation house based between London and Tokyo.
+            Synthesised through cryogenic botanical extractions, zero water dilution,
+            and infused with wild turmeric, sacred sandalwood, and Ayurvedic Rasayanas.
           </p>
           <div className="mt-6 flex items-center gap-4 text-[10px] font-mono uppercase text-[#c9a86a]">
-            <span>18 Place Vendôme, Paris</span>
+            <span>Mayfair, London</span>
             <span>•</span>
-            <span>Gion, Kyoto</span>
+            <span>Ginza, Tokyo</span>
           </div>
         </div>
 
-        {/* Repertoire Column (3 cols) */}
+        {/* The Repertoire / Shop Column (3 cols) */}
         <div className="md:col-span-3">
           <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-white/40 block mb-4">
             The Repertoire
@@ -48,69 +60,74 @@ export const Footer: React.FC = () => {
             ))}
             <li>
               <Link
-                href="/#collection"
+                href="/shop"
                 className="text-[#c9a86a] hover:underline inline-block pt-1 text-[11px]"
               >
-                View Complete Repertoire →
+                View Complete Shop →
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Atelier & Governance Column (2 cols) */}
+        {/* Navigation Pages Column (2 cols) */}
         <div className="md:col-span-2">
           <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-white/40 block mb-4">
-            The Atelier
+            Navigation
           </span>
           <ul className="space-y-2.5 text-xs text-white/60 font-light">
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/shop" className="hover:text-white transition-colors">
+                Shop
+              </Link>
+            </li>
             <li>
               <Link href="/about" className="hover:text-white transition-colors">
-                Atelier Manifesto
+                About Us
               </Link>
             </li>
             <li>
-              <Link href="/rituals" className="hover:text-white transition-colors">
-                Circadian Rituals
+              <Link href="/contact" className="hover:text-white transition-colors">
+                Contact Us
               </Link>
             </li>
             <li>
-              <Link href="/#specifications" className="hover:text-white transition-colors">
-                Vessel Anatomy
-              </Link>
-            </li>
-            <li>
-              <Link href="/#feedback" className="hover:text-white transition-colors">
-                Patron Dispatches
+              <Link href="/cart" className="hover:text-white transition-colors">
+                Cart
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Private Client Services (2 cols) */}
+        {/* Client Services (2 cols) */}
         <div className="md:col-span-2">
           <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-white/40 block mb-4">
-            Private Client
+            Client Care
           </span>
           <ul className="space-y-2.5 text-xs text-white/60 font-light">
             <li>
-              <Link href="/diagnostic" className="hover:text-[#c9a86a] text-white/80 transition-colors">
-                Bespoke Diagnostic →
+              <Link href="/contact" className="hover:text-[#c9a86a] text-white/80 transition-colors">
+                Book Consultation →
               </Link>
             </li>
             <li>
               <Link href="/products/suwani-creme-dor" className="hover:text-white transition-colors">
-                Crème d'Or Allocation
+                Golden Cream
               </Link>
             </li>
             <li>
-              <span className="hover:text-white cursor-pointer transition-colors">
-                Climate Courier
-              </span>
+              <Link href="/contact" className="hover:text-white transition-colors">
+                Mayfair Studio
+              </Link>
             </li>
             <li>
-              <span className="hover:text-white cursor-pointer transition-colors">
-                Client Concierge
-              </span>
+              <Link href="/cart" className="hover:text-white transition-colors">
+                View Cart
+              </Link>
             </li>
           </ul>
         </div>
@@ -118,7 +135,7 @@ export const Footer: React.FC = () => {
 
       {/* Bottom Legal & Copyright Bar */}
       <div className="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] uppercase tracking-widest text-white/40 font-mono">
-        <div>© {new Date().getFullYear()} SUWANI BEAUTÉ ATELIER. ALL RIGHTS RESERVED.</div>
+        <div>© {new Date().getFullYear()} ASALIYA PRODUCTION. ALL RIGHTS RESERVED.</div>
         <div className="flex items-center gap-6">
           <span className="hover:text-white cursor-pointer transition-colors">Clean Charter</span>
           <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>

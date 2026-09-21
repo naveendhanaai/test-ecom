@@ -3,11 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import { Header } from "./components/Header";
+import { AyurvedicHeroSection } from "./components/AyurvedicHeroSection";
 import { ProductScrollCanvas } from "./components/ProductScrollCanvas";
 import { ProductGridSection } from "./components/ProductGridSection";
 import { MarqueeTicker } from "./components/MarqueeTicker";
 import { LuxuryBannerSection } from "./components/LuxuryBannerSection";
 import { CustomerFeedbackSection } from "./components/CustomerFeedbackSection";
+import { PartnersSection } from "./components/PartnersSection";
 import { Footer } from "./components/Footer";
 import { ArrowUpRight } from "lucide-react";
 
@@ -17,10 +19,8 @@ export default function Home() {
       {/* Navigation Header */}
       <Header />
 
-      {/* Hero Scroll-Driven Product Narrative (Completely unobstructed vessel in center) */}
-      <section id="story" className="relative w-full">
-        <ProductScrollCanvas />
-      </section>
+      {/* 1st Section: Cinematic Ayurvedic Hero & Glowing Skin */}
+      <AyurvedicHeroSection />
 
       {/* Editorial Running Press & Accolades Marquee */}
       <MarqueeTicker />
@@ -31,34 +31,49 @@ export default function Home() {
       {/* Luxury Brand & Harvest Allocation Banner */}
       <LuxuryBannerSection />
 
-      {/* Architectural Specifications Section */}
-      <section id="specifications" className="py-32 px-6 md:px-12 bg-[#000000] border-t border-white/[0.06]">
-        <div className="max-w-6xl mx-auto">
+      {/* Architectural Specifications Section (Section 04: Vessel Engineering) */}
+      <section id="specifications" className="py-32 px-6 md:px-12 bg-gradient-to-b from-[#050608] via-[#07080c] to-[#020304] relative">
+        {/* Technical Section Transition Divider */}
+        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        
+        {/* Subtle Architectural Grid Pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02] pointer-events-none"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-3">
-                Architectural Anatomy
-              </span>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
+                <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+                  ARCHITECTURAL ANATOMY • VESSEL ENGINEERING
+                </span>
+              </div>
               <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white/95">
                 Vessel Engineering
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-white/60 font-light max-w-md leading-relaxed">
-              Every curve, thread, and seal of the Suwani tub is precision calibrated to protect light-sensitive
+              Every curve, thread, and seal of the Asaliya Production vessel is precision calibrated to protect light-sensitive
               bio-active peptides from photochemical and atmospheric degradation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/[0.06] hover:border-[#c9a86a]/30 transition-colors flex flex-col justify-between">
+            <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-[#c9a86a]/40 transition-colors flex flex-col justify-between shadow-xl">
               <div>
-                <span className="font-mono text-xs text-[#c9a86a]">01 / GILDED ARMOR</span>
+                <span className="font-mono text-xs text-[#c9a86a]">01 / SACRED BOTANICAL ALCHEMY</span>
                 <h3 className="text-xl font-light text-white/90 mt-2">
-                  Brushed 24K Gold Alloy
+                  Wild Turmeric &amp; Sandalwood Matrix
                 </h3>
                 <p className="text-xs text-white/50 font-light mt-3 leading-relaxed">
-                  Engineered from solid-weighted brass with a brushed 24K gold finish that blocks
-                  100% of thermal radiation and actinic light, preserving sensitive active bio-lipids.
+                  Infused with wild-harvested Turmeric (Haridra) and sacred Sandalwood (Chandan) to pacify
+                  Pitta inflammation, clarify epidermal tone, and impart lasting luminous Ojas.
                 </p>
               </div>
               <div className="mt-8 pt-4 border-t border-white/[0.06] text-[11px] text-white/40 font-mono">
@@ -66,7 +81,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/[0.06] hover:border-[#c9a86a]/30 transition-colors flex flex-col justify-between">
+            <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-[#c9a86a]/40 transition-colors flex flex-col justify-between shadow-xl">
               <div>
                 <span className="font-mono text-xs text-[#c9a86a]">02 / HERMETIC CLOSURE</span>
                 <h3 className="text-xl font-light text-white/90 mt-2">
@@ -82,7 +97,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/[0.06] hover:border-[#c9a86a]/30 transition-colors flex flex-col justify-between">
+            <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-[#c9a86a]/40 transition-colors flex flex-col justify-between shadow-xl">
               <div>
                 <span className="font-mono text-xs text-[#c9a86a]">03 / BIOCHEMISTRY</span>
                 <h3 className="text-xl font-light text-white/90 mt-2">
@@ -101,36 +116,88 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Scroll-Driven Product Narrative Canvas (Section: Vessel in Motion) */}
+      <section id="story" className="relative w-full border-t border-white/[0.08] bg-[#000000]">
+        {/* Kinetic Vessel Exploration Header */}
+        <div className="w-full py-4 border-b border-white/[0.06] bg-[#030303] flex items-center justify-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
+          <span className="text-[10px] uppercase tracking-[0.35em] text-white/80 font-mono">
+            KINETIC JOURNEY • VESSEL IN MOTION
+          </span>
+        </div>
+        <ProductScrollCanvas />
+      </section>
+
       {/* Customer Feedback & Patron Testimonials Section */}
       <CustomerFeedbackSection />
 
-      {/* Daily Ritual Section */}
-      <section id="ritual" className="py-32 px-6 md:px-12 bg-[#000000] border-t border-white/[0.06]">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-3">
-            Application Protocol
-          </span>
+      {/* Global Accredited Partners Section */}
+      <PartnersSection sectionIndex="" />
+
+      {/* Daily Ritual Section (Application Protocol) */}
+      <section id="ritual" className="py-32 px-6 md:px-12 bg-gradient-to-b from-[#080705] via-[#0d0b07] to-[#020202] relative overflow-hidden">
+        {/* Golden Section Transition Divider */}
+        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#c9a86a]/40 to-transparent" />
+        
+        {/* Sacred Temple Radial Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full bg-[#c9a86a]/[0.08] blur-[150px] pointer-events-none" />
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+              APPLICATION PROTOCOL • THE SACRED RITUAL
+            </span>
+          </div>
+
           <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white/95">
-            The Suwani Ritual
+            The Asaliya Ritual
           </h2>
-          <p className="mt-5 text-sm sm:text-base text-white/60 font-light max-w-xl mx-auto leading-relaxed">
+          <p className="mt-5 text-sm sm:text-base text-white/70 font-light max-w-xl mx-auto leading-relaxed">
             Unseal the lid, lift the hermetic disc, and scoop a pearl of whipped cream.
-            Warm between fingertips to activate bio-lipids before pressing gently across the visage.
+            Warm between fingertips to activate bio-lipids before pressing gently across the complexion.
           </p>
+
+          {/* 3 Step Protocol Cards */}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left max-w-3xl mx-auto">
+            <div className="p-6 rounded-2xl bg-black/60 border border-white/10 backdrop-blur-md">
+              <span className="text-xs font-mono text-[#c9a86a] block mb-2">STEP 01</span>
+              <h4 className="text-sm font-light text-white mb-1">Unseal &amp; Awaken</h4>
+              <p className="text-[11px] text-white/50 font-light leading-relaxed">
+                Release the hermetic freshness disc to introduce ambient oxygen to the bio-lipid surface.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-black/60 border border-white/10 backdrop-blur-md">
+              <span className="text-xs font-mono text-[#c9a86a] block mb-2">STEP 02</span>
+              <h4 className="text-sm font-light text-white mb-1">Thermal Activation</h4>
+              <p className="text-[11px] text-white/50 font-light leading-relaxed">
+                Warm a pearl of cream between fingertips for 3 seconds to dissolve the plant wax matrix.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-black/60 border border-white/10 backdrop-blur-md">
+              <span className="text-xs font-mono text-[#c9a86a] block mb-2">STEP 03</span>
+              <h4 className="text-sm font-light text-white mb-1">Epicuticular Press</h4>
+              <p className="text-[11px] text-white/50 font-light leading-relaxed">
+                Gently press across facial Marma points with upward strokes until fully absorbed.
+              </p>
+            </div>
+          </div>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/products/suwani-creme-dor"
-              className="px-8 py-4 rounded-full bg-white text-[#000000] hover:bg-[#c9a86a] hover:text-[#000000] text-xs uppercase tracking-[0.25em] font-medium transition-all duration-300 shadow-xl inline-flex items-center gap-2"
+              className="px-8 py-4 rounded-full bg-[#c9a86a] text-[#000000] hover:bg-white text-xs uppercase tracking-[0.25em] font-semibold transition-all duration-300 shadow-xl inline-flex items-center gap-2"
             >
-              <span>Reserve Crème d'Or Allocation</span>
+              <span>Reserve Golden Cream Allocation</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/rituals"
+              href="/shop"
               className="px-8 py-4 rounded-full bg-white/[0.03] border border-white/20 hover:border-white text-white text-xs uppercase tracking-[0.25em] font-light transition-all"
             >
-              Explore Circadian Rituals
+              Explore Full Shop
             </Link>
           </div>
         </div>

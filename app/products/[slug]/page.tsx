@@ -23,15 +23,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!product) {
     return {
-      title: "Product Not Found | SUWANI Haute Formulation",
+      title: "Product Not Found | ASALIYA PRODUCTION Haute Formulation",
     };
   }
 
   return {
-    title: `${product.name} — ${product.subtitle} | SUWANI`,
+    title: `${product.name} — ${product.subtitle} | ASALIYA PRODUCTION`,
     description: product.description,
     openGraph: {
-      title: `${product.name} | SUWANI Haute Formulation`,
+      title: `${product.name} | ASALIYA PRODUCTION Haute Formulation`,
       description: product.tagline,
       images: [{ url: product.heroImage }],
     },
