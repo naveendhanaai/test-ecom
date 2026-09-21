@@ -397,9 +397,9 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
           {/* INCI Ingredients Tab */}
           {activeTab === "ingredients" && (
             <div className="p-8 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-                <span className="text-[10px] uppercase tracking-widest text-[#c9a86a] font-mono">
+              <div className="flex items-center gap-2.5 mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+                <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
                   100% Transparent Full Disclosure
                 </span>
               </div>
@@ -425,7 +425,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-20 border-t border-white/[0.06]">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-2">
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium block mb-2">
               Synergistic Ritual
             </span>
             <h2 className="text-2xl sm:text-4xl font-light tracking-tight text-white/95">

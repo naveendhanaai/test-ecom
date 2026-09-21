@@ -145,7 +145,7 @@ const PARTNERS: Partner[] = [
   },
   {
     id: "kerala-ayurveda",
-    name: "Kerala Vedic Institute",
+    name: "Kerala Vedic Research",
     renderLogo: (isHovered) => (
       <svg viewBox="0 0 260 60" className="h-10 sm:h-11 w-auto overflow-visible transition-colors duration-300">
         <g transform="translate(25, 12)">
@@ -307,9 +307,9 @@ export const PartnersSection: React.FC<PartnersSectionProps> = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-[#c9a86a]/[0.025] blur-[150px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto relative z-10 mb-14 text-center">
-        <div className="inline-flex items-center gap-2 mb-3">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-          <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+        <div className="inline-flex items-center gap-2.5 mb-3">
+          <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+          <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
             GLOBAL NETWORK • ACCREDITED ALLIANCE
           </span>
         </div>

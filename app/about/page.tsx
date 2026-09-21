@@ -20,9 +20,9 @@ export default function AboutPage() {
       {/* Hero Manifesto Section */}
       <section className="pt-40 pb-24 px-6 md:px-12 border-b border-white/[0.06] relative overflow-hidden">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
+          <div className="flex items-center gap-2.5 mb-6">
+            <span className="w-2 h-2 rounded-full bg-[#c9a86a]" />
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium">
               House Manifesto • Vedic Rasayana &amp; Modern Cellular Science
             </span>
           </div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <section className="py-28 px-6 md:px-12 border-b border-white/[0.06]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20">
           <div className="md:col-span-4">
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-3">
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium block mb-3">
               The Genesis
             </span>
             <h2 className="text-2xl sm:text-4xl font-light tracking-tight text-white/95">
@@ -78,7 +78,7 @@ export default function AboutPage() {
       <section className="py-32 px-6 md:px-12 bg-white/[0.01] border-b border-white/[0.06]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-3">
+            <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium block mb-3">
               Formulation Standard
             </span>
             <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white/95">
@@ -150,7 +150,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono block mb-3">
+              <span className="text-xs sm:text-xs md:text-sm uppercase tracking-[0.3em] text-[#c9a86a] font-mono font-medium block mb-3">
                 Sanctuaries &amp; Laboratories
               </span>
               <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white/95">
