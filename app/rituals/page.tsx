@@ -58,7 +58,7 @@ export default function RitualsPage() {
           </h1>
 
           <p className="mt-8 text-base sm:text-lg text-white/70 font-light max-w-2xl leading-relaxed">
-            In the Suwani philosophy, application is not merely hygiene—it is an intentional sensory protocol.
+            In the Asaliya Production philosophy, application is not merely hygiene—it is an intentional sensory protocol.
             Our anhydrous matrices respond directly to human dermal temperature, requiring thermal activation to unlock living botanical bio-lipids.
           </p>
 
@@ -139,16 +139,16 @@ export default function RitualsPage() {
                 </div>
 
                 <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/[0.06]">
-                  <span className="font-mono text-xs text-[#c9a86a] block mb-4">PHASE 03 • ARMOR</span>
-                  <h3 className="text-lg font-light text-white mb-2">Suwani Crème d'Or</h3>
+                  <span className="font-mono text-xs text-[#c9a86a] block mb-4">PHASE 03 • HERBAL SEAL</span>
+                  <h3 className="text-lg font-light text-white mb-2">Golden Restorative Cream</h3>
                   <p className="text-xs text-white/50 leading-relaxed font-light">
-                    Warm a pearl of gilded whipped cream between fingertips for 3 seconds. Press gently into visage and neck until completely absorbed.
+                    Warm a pearl of wild turmeric &amp; sandalwood whipped cream between fingertips for 3 seconds. Press gently into complexion and neck until completely absorbed.
                   </p>
                   <Link
                     href="/products/suwani-creme-dor"
                     className="inline-flex items-center gap-1 text-[11px] font-mono text-[#c9a86a] mt-6 hover:underline uppercase"
                   >
-                    <span>View Crème</span>
+                    <span>View Cream</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </Link>
                 </div>

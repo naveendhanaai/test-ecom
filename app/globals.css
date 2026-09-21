@@ -52,3 +52,50 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #2b2b2b;
 }
+
+/* Cinematic Ayurvedic Hero Animations */
+@keyframes slowKenBurns {
+  0% {
+    transform: scale(1) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.05) translate(-0.8%, -0.4%);
+  }
+  100% {
+    transform: scale(1) translate(0%, 0%);
+  }
+}
+
+@keyframes skinGlowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes radarPing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.animate-ken-burns {
+  animation: slowKenBurns 24s ease-in-out infinite alternate;
+}
+
+.animate-skin-glow {
+  animation: skinGlowPulse 4.5s ease-in-out infinite;
+}
+
+.animate-radar-ping {
+  animation: radarPing 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

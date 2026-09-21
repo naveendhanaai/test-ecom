@@ -26,24 +26,30 @@ export const ProductGridSection: React.FC = () => {
   });
 
   return (
-    <section id="collection" className="py-32 px-6 md:px-12 bg-[#000000] border-t border-white/[0.06]">
-      <div className="max-w-7xl mx-auto">
+    <section id="collection" className="py-32 px-6 md:px-12 bg-gradient-to-b from-[#070707] via-[#090909] to-[#040404] relative">
+      {/* Golden Section Transition Divider */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#c9a86a]/40 to-transparent" />
+      
+      {/* Subtle Ambient Section Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#c9a86a]/[0.03] blur-[100px] pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
               <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
-                The Suwani Repertoire
+                THE REPERTOIRE • VEDIC FORMULATIONS
               </span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white/95">
-              Haute Cellular Formulations
+              Ayurvedic Cellular Formulations
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-white/60 font-light max-w-md leading-relaxed">
-            Synthesized through cryogenic botanical extractions and Kyoto bio-ferments.
-            Zero water dilution. Numbered allocations in light-blocking architectural vessels.
+            Synthesised through sacred Ayurvedic Rasayana botanicals, cryogenic extractions,
+            and zero water dilution. Numbered allocations in light-blocking architectural vessels.
           </p>
         </div>
 
@@ -107,7 +113,7 @@ export const ProductGridSection: React.FC = () => {
             <div>
               <h4 className="text-sm font-medium text-white/90">Numbered Micro-Batches</h4>
               <p className="text-xs text-white/50 mt-1 font-light leading-relaxed">
-                Limited seasonal harvest allocations individually hand-sealed in Paris.
+                Limited seasonal harvest allocations individually hand-sealed in London.
               </p>
             </div>
           </div>

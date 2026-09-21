@@ -20,40 +20,40 @@ interface Testimonial {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
-    author: "Éléonore de V.",
-    location: "Paris, 8th Arrondissement",
-    allocationNo: "Batch #0314 / FR",
-    product: "Suwani Crème d'Or",
+    author: "Lady Victoria S.",
+    location: "Mayfair, London",
+    allocationNo: "Batch #0314 / UK",
+    product: "Golden Restorative Cream",
     category: "cream",
-    skinProfile: "Sensitized Urban Lipid Deficit",
+    skinProfile: "Sensitised Urban Lipid Deficit",
     rating: 5,
     date: "August 2026",
     title: "An architectural marvel before you even touch the cream",
     review:
-      "Unscrewing the weighted 24K gilded cap and lifting the hermetic seal feels like an unhurried sacred ritual. The whipped emulsion is utterly weightless yet deeply quenching—within three mornings, the dehydration micro-lines around my cheekbones completely vanished.",
+      "Unscrewing the weighted obsidian cap and lifting the hermetic seal feels like an unhurried sacred ritual. The grounding aroma of wild turmeric and Mysore sandalwood is intoxicating, and within three mornings, the dehydration micro-lines around my cheekbones completely vanished.",
   },
   {
     id: "t2",
     author: "Kenji Takahashi",
     location: "Minami-Aoyama, Tokyo",
     allocationNo: "Batch #0592 / JP",
-    product: "Suwani Crème d'Or",
+    product: "Golden Restorative Cream",
     category: "cream",
     skinProfile: "Reactive Winter Barrier",
     rating: 5,
     date: "July 2026",
-    title: "Kyoto botanical elegance meets French formulation perfection",
+    title: "Botanical elegance meets British formulation perfection",
     review:
-      "Having tested countless heritage Japanese formulations, Suwani operates on another plane. You feel the Camellia seed oil immediately bond with your skin without any tacky residue. It transforms dry epidermal tightness into supple porcelain calm.",
+      "Having tested countless heritage Japanese formulations, Asaliya Production operates on another plane. You feel the Camellia seed oil immediately bond with your skin without any tacky residue. It transforms dry epidermal tightness into supple porcelain calm.",
   },
   {
     id: "t3",
     author: "Dr. Sophia Lindqvist",
     location: "Zurich, Switzerland",
     allocationNo: "Batch #0208 / CH",
-    product: "Sérum Phyto-Cellulaire",
+    product: "Phyto-Cellular Renewal Serum",
     category: "serum",
-    skinProfile: "Post-Laser Sensitive Epiderma",
+    skinProfile: "Post-Laser Sensitive Epidermis",
     rating: 5,
     date: "August 2026",
     title: "Clinical-level bakuchiol with zero irritation",
@@ -63,11 +63,11 @@ const TESTIMONIALS: Testimonial[] = [
   {
     id: "t4",
     author: "Camilla Thorne",
-    location: "Upper East Side, New York",
-    allocationNo: "Batch #0771 / US",
-    product: "L'Huile Céleste",
+    location: "Kensington, London",
+    allocationNo: "Batch #0771 / UK",
+    product: "Celestial Radiance Facial Oil",
     category: "oil",
-    skinProfile: "Frequent Traveler / Dehydrated Air",
+    skinProfile: "Frequent Traveller / Dehydrated Air",
     rating: 5,
     date: "June 2026",
     title: "The only elixir that survives long-haul cabin air",
@@ -77,11 +77,11 @@ const TESTIMONIALS: Testimonial[] = [
   {
     id: "t5",
     author: "Marcello Bellini",
-    location: "Brera, Milan",
-    allocationNo: "Batch #0419 / IT",
-    product: "Baume Réparateur Céleste",
+    location: "Edinburgh, Scotland",
+    allocationNo: "Batch #0419 / UK",
+    product: "Nocturnal Repair Balm",
     category: "cream",
-    skinProfile: "Dry Visage / Nocturnal Repair",
+    skinProfile: "Dry Complexion / Nocturnal Repair",
     rating: 5,
     date: "May 2026",
     title: "Waking up with newly constructed skin",
@@ -93,9 +93,9 @@ const TESTIMONIALS: Testimonial[] = [
     author: "Aurelia von H.",
     location: "Vienna, Austria",
     allocationNo: "Batch #0940 / AT",
-    product: "Suwani Crème d'Or",
+    product: "Golden Restorative Cream",
     category: "cream",
-    skinProfile: "Fine Lines & Photo-Stressed Visage",
+    skinProfile: "Fine Lines & Photo-Stressed Complexion",
     rating: 5,
     date: "August 2026",
     title: "Worth every moment on the waitlist",
@@ -110,9 +110,12 @@ export const CustomerFeedbackSection: React.FC = () => {
   const filtered = TESTIMONIALS.filter((t) => (filter === "all" ? true : t.category === filter));
 
   return (
-    <section id="feedback" className="py-32 px-6 md:px-12 bg-[#030303] border-t border-white/[0.06] relative overflow-hidden">
+    <section id="feedback" className="py-32 px-6 md:px-12 bg-gradient-to-b from-[#040404] via-[#070605] to-[#040302] relative overflow-hidden">
+      {/* Golden Section Transition Divider */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#c9a86a]/30 to-transparent" />
+
       {/* Background Ambience */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#c9a86a]/[0.025] blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#c9a86a]/[0.035] blur-[150px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -121,7 +124,7 @@ export const CustomerFeedbackSection: React.FC = () => {
             <div className="flex items-center gap-2 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#c9a86a]" />
               <span className="text-[10px] uppercase tracking-[0.35em] text-[#c9a86a] font-mono">
-                Patron Dispatches • Verified Allocations
+                PATRON DISPATCHES • VERIFIED ALLOCATIONS
               </span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white/95">
@@ -152,7 +155,7 @@ export const CustomerFeedbackSection: React.FC = () => {
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-12 border-b border-white/[0.06] scrollbar-none">
           {[
             { label: "All Dispatches", value: "all" },
-            { label: "Crème d'Or & Balms", value: "cream" },
+            { label: "Golden Cream & Balms", value: "cream" },
             { label: "Cellular Oils", value: "oil" },
             { label: "Bio-Serums", value: "serum" },
           ].map((cat) => (
