@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
           <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 rounded-2xl overflow-hidden border-2 border-[#c9a86a] group-hover:border-[#f0dfba] transition-all duration-300 bg-black flex items-center justify-center shadow-xl shadow-[#c9a86a]/35 group-hover:shadow-[#c9a86a]/60 shrink-0 p-1">
             <span className="absolute -inset-1 rounded-2xl bg-[#c9a86a]/20 blur-sm group-hover:bg-[#c9a86a]/40 transition-all pointer-events-none" />
             <Image
-              src="/logo.jpg"
+              src="/nav-logo.jpg"
               alt="Asaliya Production Logo"
               fill
               className="object-contain p-0.5 group-hover:scale-105 transition-transform duration-300"
@@ -52,14 +52,16 @@ export const Header: React.FC = () => {
             />
           </div>
 
-          {/* Brand Name Typography - Scaled Up and Prominent */}
-          <div className="flex flex-col">
-            <span className="text-lg sm:text-xl md:text-2xl font-semibold tracking-[0.22em] uppercase text-white group-hover:text-[#c9a86a] transition-colors leading-none drop-shadow-[0_2px_12px_rgba(201,168,106,0.35)]">
-              ASALIYA
-            </span>
-            <span className="text-[10px] sm:text-xs md:text-xs tracking-[0.45em] uppercase text-[#e5c17d] font-bold mt-1 drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
-              PRODUCTION
-            </span>
+          {/* Brand Name Wordmark - 3D Metallic Gold Visual */}
+          <div className="flex items-center">
+            <Image
+              src="/asaliya-wordmark.png"
+              alt="ASALIYA"
+              width={160}
+              height={53}
+              priority
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain filter drop-shadow-[0_2px_12px_rgba(201,168,106,0.45)] group-hover:brightness-115 transition-all duration-300"
+            />
           </div>
         </Link>
 

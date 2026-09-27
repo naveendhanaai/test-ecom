@@ -86,7 +86,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         {/* Left Column: Visual Gallery / 3D Scrubber (7 cols) */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden bg-black border border-white/[0.08] shadow-2xl flex items-center justify-center">
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-3xl overflow-hidden bg-[#0a0a0a] border border-white/[0.08] shadow-2xl flex items-center justify-center p-4 sm:p-6">
             {isFlagship ? (
               <div className="relative w-full h-full">
                 <Image
@@ -111,7 +111,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ produc
                   priority
                   unoptimized
                   sizes="(max-width: 1200px) 100vw, 60vw"
-                  className="object-contain"
+                  className="object-contain p-2 sm:p-4"
                 />
               </div>
             )}

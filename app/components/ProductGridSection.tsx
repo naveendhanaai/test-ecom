@@ -5,13 +5,14 @@ import { PRODUCTS, Product } from "@/data/products";
 import { ProductCard } from "./ProductCard";
 import { ShieldCheck, Sparkles, Feather, Droplets } from "lucide-react";
 
-type FilterCategory = "all" | "cream" | "oil" | "serum" | "treatment" | "mist";
+type FilterCategory = "all" | "serum" | "lotion" | "cream" | "oil" | "treatment" | "mist";
 
 const CATEGORIES: { label: string; value: FilterCategory }[] = [
   { label: "All Editions", value: "all" },
+  { label: "Bio-Serums", value: "serum" },
+  { label: "Hydrating Lotions", value: "lotion" },
   { label: "Creams & Balms", value: "cream" },
   { label: "Precious Oils", value: "oil" },
-  { label: "Bio-Serums", value: "serum" },
   { label: "Treatments", value: "treatment" },
   { label: "Cellular Mists", value: "mist" },
 ];
@@ -21,7 +22,6 @@ export const ProductGridSection: React.FC = () => {
 
   const filteredProducts = PRODUCTS.filter((product) => {
     if (activeFilter === "all") return true;
-    if (activeFilter === "cream") return product.category === "cream" || product.slug === "suwani-baume-nuit";
     return product.category === activeFilter;
   });
 

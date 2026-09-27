@@ -130,7 +130,7 @@ export default function RitualsPage() {
                     Dispense one pipette of 2% Bio-Bakuchiol and copper peptides. Sweep upwards along contour lines to boost lymphatic micro-circulation.
                   </p>
                   <Link
-                    href="/products/suwani-serum-bakuchiol"
+                    href="/products/asaliya-hydrating-face-serum"
                     className="inline-flex items-center gap-1 text-[11px] font-mono text-[#c9a86a] mt-6 hover:underline uppercase"
                   >
                     <span>View Serum</span>
@@ -176,7 +176,7 @@ export default function RitualsPage() {
                     Apply a golden veil of fermented papaya proteases. Allow to bloom for 10 minutes to gently lift cellular debris without physical abrasion.
                   </p>
                   <Link
-                    href="/products/suwani-nectar-resurfacant"
+                    href="/products/ancient-nutra-heenbovitiya"
                     className="inline-flex items-center gap-1 text-[11px] font-mono text-[#c9a86a] mt-6 hover:underline uppercase"
                   >
                     <span>View Treatment</span>
@@ -201,15 +201,15 @@ export default function RitualsPage() {
 
                 <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/[0.06]">
                   <span className="font-mono text-xs text-[#c9a86a] block mb-4">PHASE 03 • COCOON</span>
-                  <h3 className="text-lg font-light text-white mb-2">Baume Réparateur Céleste</h3>
+                  <h3 className="text-lg font-light text-white mb-2">Body Surface Hydration Lotion</h3>
                   <p className="text-xs text-white/50 leading-relaxed font-light">
-                    Warm a pea-sized amount of anhydrous Murumuru butter into a fluid golden balm. Seals in overnight moisture and repairs stratum corneum fissures.
+                    Smooth Natural Moisturizing Factors and Inulin emulsion into limbs and torso to seal in deep hydration.
                   </p>
                   <Link
-                    href="/products/suwani-baume-nuit"
+                    href="/products/asaliya-natural-moisturizing-body-lotion"
                     className="inline-flex items-center gap-1 text-[11px] font-mono text-[#c9a86a] mt-6 hover:underline uppercase"
                   >
-                    <span>View Baume</span>
+                    <span>View Lotion</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </Link>
                 </div>
