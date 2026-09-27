@@ -54,26 +54,66 @@ body {
 }
 
 /* Cinematic Ayurvedic Hero Animations */
-@keyframes slowKenBurns {
+@keyframes cinematicHeroFloat {
   0% {
-    transform: scale(1) translate(0%, 0%);
+    transform: scale(1.03) translate(0%, 0%) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.10) translate(-1.8%, -1.0%) rotate(0.5deg);
   }
   50% {
-    transform: scale(1.05) translate(-0.8%, -0.4%);
+    transform: scale(1.14) translate(-0.8%, 1.2%) rotate(-0.3deg);
+  }
+  75% {
+    transform: scale(1.08) translate(1.4%, -0.6%) rotate(0.4deg);
   }
   100% {
-    transform: scale(1) translate(0%, 0%);
+    transform: scale(1.03) translate(0%, 0%) rotate(0deg);
+  }
+}
+
+@keyframes dewShimmerSweep {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rainMistFall {
+  0% {
+    transform: translateY(-40px) translateX(0) scale(0.7);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.75;
+  }
+  80% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(220px) translateX(-35px) scale(1.1);
+    opacity: 0;
   }
 }
 
 @keyframes skinGlowPulse {
   0%, 100% {
-    opacity: 0.4;
+    opacity: 0.35;
     transform: scale(1);
   }
   50% {
-    opacity: 0.85;
-    transform: scale(1.12);
+    opacity: 0.9;
+    transform: scale(1.18);
   }
 }
 
@@ -89,11 +129,19 @@ body {
 }
 
 .animate-ken-burns {
-  animation: slowKenBurns 24s ease-in-out infinite alternate;
+  animation: cinematicHeroFloat 11s ease-in-out infinite;
+}
+
+.animate-dew-shimmer {
+  animation: dewShimmerSweep 7s ease-in-out infinite;
+}
+
+.animate-rain-mist {
+  animation: rainMistFall 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .animate-skin-glow {
-  animation: skinGlowPulse 4.5s ease-in-out infinite;
+  animation: skinGlowPulse 4s ease-in-out infinite;
 }
 
 .animate-radar-ping {

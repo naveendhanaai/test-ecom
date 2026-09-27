@@ -14,20 +14,21 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-4 mb-6">
             <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl overflow-hidden border-2 border-[#c9a86a] bg-black flex items-center justify-center shadow-xl shadow-[#c9a86a]/30 shrink-0 p-1">
               <Image
-                src="/logo.jpg"
+                src="/nav-logo.jpg"
                 alt="Asaliya Production Logo"
                 fill
                 className="object-contain p-0.5"
                 sizes="72px"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-semibold tracking-[0.22em] uppercase text-white/95">
-                ASALIYA
-              </span>
-              <span className="text-xs sm:text-xs tracking-[0.45em] uppercase text-[#e5c17d] font-bold mt-1">
-                PRODUCTION
-              </span>
+            <div className="flex items-center">
+              <Image
+                src="/asaliya-wordmark.png"
+                alt="ASALIYA"
+                width={160}
+                height={53}
+                className="h-9 sm:h-10 w-auto object-contain filter drop-shadow-[0_2px_12px_rgba(201,168,106,0.4)]"
+              />
             </div>
           </div>
           <p className="text-xs text-white/50 font-light leading-relaxed max-w-sm">

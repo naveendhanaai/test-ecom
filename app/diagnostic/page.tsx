@@ -48,12 +48,12 @@ const QUESTIONS: Question[] = [
       {
         label: "Elasticity Deficit & Expression Stress",
         description: "Fine dehydration micro-lines, loss of firmness along cheekbones and jawline.",
-        productMatchId: "suwani-serum-bakuchiol",
+        productMatchId: "asaliya-hydrating-face-serum",
       },
       {
         label: "Micro-Congestion & Cellular Buildup",
         description: "Rough superficial stratum corneum, clogged micro-pores, and uneven finish.",
-        productMatchId: "suwani-nectar-resurfacant",
+        productMatchId: "ancient-nutra-heenbovitiya",
       },
     ],
   },
@@ -71,7 +71,7 @@ const QUESTIONS: Question[] = [
       {
         label: "Frequent Aviation & Dehydrated Microclimates",
         description: "Low-humidity pressurized cabins, aggressive air conditioning, and dry seasonal winds.",
-        productMatchId: "suwani-baume-nuit",
+        productMatchId: "asaliya-natural-moisturizing-body-lotion",
       },
       {
         label: "Alpine Altitudes & High Solar Exposure",
@@ -104,12 +104,12 @@ const QUESTIONS: Question[] = [
       {
         label: "Concentrated Waterless Phyto-Gel",
         description: "Direct cooling peptide delivery that tightens and lifts on immediate contact.",
-        productMatchId: "suwani-serum-bakuchiol",
+        productMatchId: "asaliya-hydrating-face-serum",
       },
       {
         label: "Rich Nocturnal Anhydrous Cocoon",
         description: "Melts between warm palms to create a breathable protective seal overnight.",
-        productMatchId: "suwani-baume-nuit",
+        productMatchId: "asaliya-natural-moisturizing-body-lotion",
       },
     ],
   },

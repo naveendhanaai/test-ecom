@@ -8,15 +8,16 @@ import { ProductCard } from "@/app/components/ProductCard";
 import { PRODUCTS, Product } from "@/data/products";
 import { Search, SlidersHorizontal, Sparkles, Shield, Droplets } from "lucide-react";
 
-type CategoryFilter = "all" | "cream" | "oil" | "serum" | "treatment" | "mist";
+type CategoryFilter = "all" | "serum" | "lotion" | "cream" | "oil" | "treatment" | "mist";
 type DoshaFilter = "all" | "tridoshic" | "vata" | "pitta" | "kapha";
 type SortOption = "featured" | "price-asc" | "price-desc" | "rating";
 
 const CATEGORIES: { label: string; value: CategoryFilter }[] = [
   { label: "All Formulations", value: "all" },
+  { label: "Bio-Serums", value: "serum" },
+  { label: "Hydrating Lotions", value: "lotion" },
   { label: "Creams & Balms", value: "cream" },
   { label: "Precious Oils", value: "oil" },
-  { label: "Bio-Serums", value: "serum" },
   { label: "Targeted Treatments", value: "treatment" },
   { label: "Cellular Mists", value: "mist" },
 ];
@@ -40,8 +41,7 @@ export default function ShopPage() {
       // Category filter
       const matchesCategory =
         selectedCategory === "all" ||
-        product.category === selectedCategory ||
-        (selectedCategory === "cream" && product.slug === "suwani-baume-nuit");
+        product.category === selectedCategory;
 
       // Dosha filter
       const matchesDosha =

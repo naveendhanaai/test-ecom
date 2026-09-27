@@ -21,38 +21,26 @@ interface BotanicalHotspot {
 // Hotspots calibrated for the right-composed visual with complete Ayurvedic & Bio-Activity details
 const hotspots: BotanicalHotspot[] = [
   {
-    id: "saffron",
-    name: "Kashmiri Saffron Threads",
-    sanskrit: "Kumkuma (कुङ्कुम)",
-    benefit: "Rare carotenoids neutralise oxidation and illuminate hyper-pigmentation.",
-    dosha: "Vata & Pitta",
-    x: "78%",
-    y: "28%",
-    icon: Droplets,
-    bioActivityLabel: "BIO-ACTIVITY",
-    bioActivityValue: "98.7% BIOAVAILABLE",
-  },
-  {
     id: "turmeric-sandalwood",
     name: "Wild Turmeric & Mysore Sandalwood",
     sanskrit: "Haridra & Chandana (हरिद्रा - चन्दन)",
     benefit: "Bio-curcuminoids and cooling santalols balance Pitta, purify the barrier, and impart luminous glow.",
     dosha: "Tridoshic",
-    x: "84%",
-    y: "20%",
+    x: "68%",
+    y: "17%",
     icon: Sparkles,
     bioActivityLabel: "BIO-ACTIVITY",
     bioActivityValue: "98.7% BIOAVAILABLE",
   },
   {
-    id: "gotu-kola",
-    name: "Gotu Kola & Centella Asiatica",
-    sanskrit: "Mandukaparni (मण्डूकपर्णी)",
-    benefit: "Stimulates type-I collagen synthesis, calms micro-inflammation, and restores elasticity.",
-    dosha: "Pitta & Kapha",
-    x: "82%",
-    y: "42%",
-    icon: Leaf,
+    id: "saffron",
+    name: "Kashmiri Saffron Threads",
+    sanskrit: "Kumkuma (कुङ्कुम)",
+    benefit: "Rare carotenoids neutralise oxidation and illuminate hyper-pigmentation.",
+    dosha: "Vata & Pitta",
+    x: "84%",
+    y: "21%",
+    icon: Droplets,
     bioActivityLabel: "BIO-ACTIVITY",
     bioActivityValue: "98.7% BIOAVAILABLE",
   },
@@ -62,8 +50,8 @@ const hotspots: BotanicalHotspot[] = [
     sanskrit: "Ojas Tejas (ओजस्)",
     benefit: "Deep dermal moisture retention, lipid barrier restoration, and luminous cellular vitality.",
     dosha: "Tridoshic",
-    x: "67%",
-    y: "36%",
+    x: "78%",
+    y: "41%",
     icon: Sun,
     bioActivityLabel: "BIO-ACTIVITY",
     bioActivityValue: "98.7% BIOAVAILABLE",
@@ -74,9 +62,21 @@ const hotspots: BotanicalHotspot[] = [
     sanskrit: "Ashwagandha (अश्वगन्धा)",
     benefit: "Neutralises cortisol-induced oxidative stress and fortifies cellular resilience.",
     dosha: "Vata & Kapha",
-    x: "73%",
-    y: "55%",
+    x: "74%",
+    y: "76%",
     icon: Shield,
+    bioActivityLabel: "BIO-ACTIVITY",
+    bioActivityValue: "98.7% BIOAVAILABLE",
+  },
+  {
+    id: "gotu-kola",
+    name: "Gotu Kola & Centella Asiatica",
+    sanskrit: "Mandukaparni (मण्डूकपर्णी)",
+    benefit: "Stimulates type-I collagen synthesis, calms micro-inflammation, and restores elasticity.",
+    dosha: "Pitta & Kapha",
+    x: "59%",
+    y: "83%",
+    icon: Leaf,
     bioActivityLabel: "BIO-ACTIVITY",
     bioActivityValue: "98.7% BIOAVAILABLE",
   },
@@ -84,28 +84,53 @@ const hotspots: BotanicalHotspot[] = [
 
 export function AyurvedicHeroSection() {
   const [activeHotspot, setActiveHotspot] = useState<BotanicalHotspot | null>(hotspots[0]);
+  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    if (typeof window === "undefined") return;
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    setMouseOffset({ x, y });
+  };
 
   return (
-    <section className="relative w-full min-h-[100dvh] sm:min-h-[92vh] flex items-center overflow-hidden bg-[#000000] pt-28 pb-16 sm:pt-24 sm:pb-16">
+    <section
+      onMouseMove={handleMouseMove}
+      className="relative w-full min-h-[100dvh] sm:min-h-[92vh] flex items-center overflow-hidden bg-[#000000] pt-28 pb-16 sm:pt-24 sm:pb-16"
+    >
       {/* Full-Bleed Edge-to-Edge Cinematic Background Visual (Woman Naturally on the Right) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="relative w-full h-full animate-ken-burns">
-          <Image
-            src="/hero-ayurvedic.jpg"
-            alt="Luminous Ayurvedic radiant skin and sacred botanicals - Asaliya Production"
-            fill
-            priority
-            quality={95}
-            className="object-cover object-[72%_center] sm:object-center filter brightness-[0.95] contrast-[1.05]"
-          />
+        {/* Parallax Mouse Layer */}
+        <div
+          className="relative w-full h-full transition-transform duration-700 ease-out will-change-transform"
+          style={{
+            transform: `translate3d(${mouseOffset.x * -18}px, ${mouseOffset.y * -14}px, 0)`,
+          }}
+        >
+          {/* Continuous Dynamic Cinematic Camera Float */}
+          <div className="relative w-full h-full animate-ken-burns">
+            <Image
+              src="/hero-ayurvedic.jpg"
+              alt="Luminous Ayurvedic radiant skin and sacred botanicals - Asaliya Production"
+              fill
+              priority
+              quality={95}
+              className="object-cover object-[78%_center] md:object-center filter brightness-[0.98] contrast-[1.06]"
+            />
+          </div>
+        </div>
+
+        {/* Dynamic Living Light Sheen Sweep Across Water Droplets & Flora */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="w-[70%] h-full bg-gradient-to-r from-transparent via-[#c9a86a]/15 via-50% to-transparent animate-dew-shimmer" />
         </div>
 
         {/* Golden Luminescence Glow focused on her glowing cheek and collarbone */}
         <div
-          className="absolute top-1/3 right-[15%] w-[550px] h-[550px] rounded-full pointer-events-none animate-skin-glow"
+          className="absolute top-1/3 right-[15%] w-[580px] h-[580px] rounded-full pointer-events-none animate-skin-glow"
           style={{
             background:
-              "radial-gradient(circle, rgba(201, 168, 106, 0.22) 0%, rgba(201, 168, 106, 0.05) 50%, transparent 75%)",
+              "radial-gradient(circle, rgba(201, 168, 106, 0.28) 0%, rgba(201, 168, 106, 0.08) 45%, transparent 75%)",
           }}
         />
 
@@ -116,12 +141,14 @@ export function AyurvedicHeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#000000]/70 via-35% to-transparent pointer-events-none hidden md:block" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-[#000000]/50 pointer-events-none hidden md:block" />
 
-        {/* Atmospheric Floating Gold Particles */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-[18%] right-[25%] w-1.5 h-1.5 rounded-full bg-[#c9a86a]/60 blur-[0.5px] animate-pulse" />
-          <div className="absolute top-[35%] right-[10%] w-2 h-2 rounded-full bg-[#e8c785]/70 blur-[1px] animate-pulse" />
-          <div className="absolute top-[65%] right-[20%] w-1.5 h-1.5 rounded-full bg-[#c9a86a]/50 blur-[0.5px] animate-pulse" />
-          <div className="absolute top-[48%] right-[12%] w-1 h-1 rounded-full bg-[#c9a86a]/80 animate-ping" />
+        {/* Falling Ambient Rain Dew & Gold Shimmer Particles */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-[8%] right-[32%] w-1.5 h-1.5 rounded-full bg-white/70 blur-[0.5px] animate-rain-mist" style={{ animationDelay: '0s', animationDuration: '5.2s' }} />
+          <div className="absolute top-[18%] right-[18%] w-2 h-2 rounded-full bg-[#c9a86a]/70 blur-[0.5px] animate-rain-mist" style={{ animationDelay: '1.4s', animationDuration: '6.4s' }} />
+          <div className="absolute top-[5%] right-[24%] w-1 h-1 rounded-full bg-white/80 animate-rain-mist" style={{ animationDelay: '2.6s', animationDuration: '4.6s' }} />
+          <div className="absolute top-[14%] right-[40%] w-1.5 h-1.5 rounded-full bg-[#e8c785]/80 blur-[0.5px] animate-rain-mist" style={{ animationDelay: '3.7s', animationDuration: '6.8s' }} />
+          <div className="absolute top-[28%] right-[14%] w-2 h-2 rounded-full bg-white/60 blur-[1px] animate-rain-mist" style={{ animationDelay: '0.9s', animationDuration: '5.1s' }} />
+          <div className="absolute top-[40%] right-[28%] w-1 h-1 rounded-full bg-[#c9a86a]/90 animate-ping" />
         </div>
       </div>
 
